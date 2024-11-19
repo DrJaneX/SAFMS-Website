@@ -1,0 +1,343 @@
+/* Farbpalette */
+:root {
+    --primary-red: #FF0000;
+    --secondary-blue: #0056B3;
+    --background-white: #FFFFFF;
+    --accent-darkblue: #002855;
+    --light-gray: #F4F4F4;
+  }
+  
+  /* General Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Body Styling */
+  body {
+    line-height: 1.6;
+    background-color: var(--background-white);
+    color: var(--accent-darkblue);
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--accent-darkblue);
+    padding: 10px 20px;
+  }
+  
+  .navbar .logo a {
+    color: var(--background-white);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links a {
+    color: var(--background-white);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: var(--primary-red);
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: url('hero.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--background-white);
+  }
+  
+  .hero-content {
+    max-width: 600px;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .cta-button {
+    background-color: var(--primary-red);
+    color: var(--background-white);
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .cta-button:hover {
+    background-color: #cc0000; /* Dunkleres Rot für Hover */
+  }
+  
+  /* Features Section */
+  .features {
+    padding: 50px 20px;
+    background-color: var(--light-gray);
+    text-align: center;
+  }
+  
+  .features h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: var(--primary-red);
+  }
+  
+  .feature-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .feature-card {
+    position: relative;
+    background: var(--background-white);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .feature-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .feature-card img:hover {
+    transform: scale(1.05); /* Vergrößerung beim Hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Tieferer Schatten beim Hover */
+  }
+  
+  .feature-card h3 {
+    margin-top: 15px;
+    color: var(--accent-darkblue);
+  }
+  
+  .feature-card p {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  /* About Section */
+  .about {
+    padding: 50px 20px;
+    background: var(--background-white);
+    text-align: center;
+  }
+  
+  .about h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--secondary-blue);
+  }
+  
+  .about p {
+    max-width: 600px;
+    margin: 0 auto 20px;
+  }
+  
+  .secondary-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--secondary-blue);
+    color: var(--background-white);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .secondary-button:hover {
+    background: #00408c; /* Dunkleres Blau für Hover */
+  }
+
+  /* Job-Kategorien */
+.job-categories {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .job-categories h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: var(--primary-red);
+  }
+  
+  .categories {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .category-card {
+    background: var(--light-gray);
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: center;
+  }
+  
+  .category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .category-card h3 {
+    color: var(--secondary-blue);
+    margin-bottom: 10px;
+  }
+  
+  .category-card p {
+    color: var(--accent-darkblue);
+    font-size: 0.9rem;
+  }
+  
+  /* Benefits Section */
+  .benefits {
+    padding: 50px 20px;
+    background-color: var(--light-gray);
+  }
+  
+  .benefits h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: var(--secondary-blue);
+  }
+  
+  .benefits ul {
+    list-style: none;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  .benefits li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: var(--accent-darkblue);
+    position: relative;
+    padding-left: 25px;
+  }
+  
+  .benefits li::before {
+    content: "✔";
+    color: var(--primary-red);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2rem;
+  }
+  
+  /* Bewerbungsformular */
+  .application-form {
+    padding: 50px 20px;
+  }
+  
+  .application-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: var(--primary-red);
+  }
+  
+  .application-form form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .application-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--accent-darkblue);
+  }
+  
+  .application-form input,
+  .application-form select,
+  .application-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .application-form button {
+    padding: 10px 20px;
+    background: var(--primary-red);
+    color: var(--background-white);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .application-form button:hover {
+    background-color: #cc0000;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--accent-darkblue);
+    color: var(--background-white);
+  }
+  
+  footer p {
+    margin: 5px 0;
+  }
+  
+  footer a {
+    color: var(--primary-red);
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  

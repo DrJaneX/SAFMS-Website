@@ -261,6 +261,58 @@ section {
   gap: 40px;
 }
 
+/* Hausordnung Section */
+.rules ul, .consequences ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: left;
+}
+
+.rules li, .consequences li {
+  font-size: 1rem;
+  color: var(--accent-darkblue);
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.rules li::before, .consequences li::before {
+  content: '✔';
+  color: var(--primary-red);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2rem;
+}
+
+/*Kontakt Section */
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px;
+  text-align: left;
+}
+
+.contact-info li {
+  font-size: 1.2rem;
+  color: var(--accent-darkblue);
+  margin-bottom: 15px;
+}
+
+.contact-info a {
+  color: var(--secondary-blue);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+
 /* Footer */
 footer {
   text-align: center;

@@ -456,27 +456,28 @@ section {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Bildcontainer - Einheitliche Größe */
+/* Einheitlicher Bildcontainer */
 .image-container {
   width: 150px; /* Einheitliche Breite */
   height: 150px; /* Einheitliche Höhe */
   margin: 15px auto; /* Automatische Zentrierung */
   overflow: hidden;
-  border-radius: 50%;
+  border-radius: 50%; /* Runde Form */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  border: 3px solid var(--primary-red); /* Einheitlicher Rand */
+  border: 3px solid var(--primary-red); /* Roter Rand */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Bilder - Einheitlich und skalierbar */
+/* Einheitliches Bildverhalten */
 .image-container img {
-  width: 100%; /* Skaliert auf die Größe des Containers */
+  width: 100%; /* Füllt den Container aus */
   height: 100%;
-  object-fit: cover; /* Keine Verzerrung des Bildes */
-  border-radius: 50%; /* Runde Form für das Bild */
+  object-fit: cover; /* Sorgt für gleichmäßige Darstellung */
+  border-radius: 50%; /* Runde Form auch für das Bild */
 }
+
 
 /* Titel und Inhalte */
 .command-card h3 {

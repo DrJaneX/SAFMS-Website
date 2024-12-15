@@ -377,6 +377,105 @@ section {
   color: var(--background-white);
 }
 
+
+/* ============================
+   High Command Section (Führung)
+============================ */
+/* High Command Section */
+.high-command {
+  padding: 80px 20px;
+  text-align: center;
+  background: var(--light-gray);
+  margin: 40px auto;
+  border-radius: 12px;
+  max-width: 1200px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.high-command h2 {
+  font-size: 2.8rem;
+  color: var(--secondary-blue);
+  margin-bottom: 30px;
+}
+
+.command-intro {
+  font-size: 1.4rem;
+  color: var(--accent-darkblue);
+  margin-bottom: 50px;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Pyramidenlayout */
+.command-pyramid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.command-middle {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Einheitlicher Kartenstil */
+.command-card {
+  background: var(--background-white);
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 240px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.command-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Bilder */
+.image-container {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 15px;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 3px solid var(--primary-red);
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Titel und Inhalte */
+.command-card h3 {
+  font-size: 1.6rem;
+  color: var(--secondary-blue);
+  margin-bottom: 10px;
+}
+
+.command-card h4 {
+  font-size: 1.4rem;
+  color: var(--primary-red);
+  margin-bottom: 10px;
+}
+
+.command-card p {
+  font-size: 1rem;
+  color: var(--accent-darkblue);
+  line-height: 1.6;
+}
+
+
+
 /* ============================
    Footer
 ============================ */

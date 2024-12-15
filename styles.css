@@ -1,4 +1,6 @@
-/* Farbpalette (globale Variablen) */
+/* ==============================
+   Farbpalette (globale Variablen)
+============================== */
 :root {
   --primary-red: #FF0000; /* Hauptfarbe Rot */
   --secondary-blue: #0056B3; /* Sekundärfarbe Blau */
@@ -7,7 +9,9 @@
   --light-gray: #F4F4F4; /* Helles Grau für Sektionen */
 }
 
-/* Allgemeine Reset-Einstellungen */
+/* ============================
+   Reset und Allgemeine Styles
+============================ */
 * {
   margin: 0;
   padding: 0;
@@ -26,8 +30,9 @@ section {
   text-align: center;
 }
 
-
-/* Navbar */
+/* ============================
+   Navigation (Navbar)
+============================ */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -64,7 +69,9 @@ section {
   text-decoration: underline;
 }
 
-/* Hero Section */
+/* ============================
+   Hero Section
+============================ */
 .hero {
   background: url('EMT.jpg') no-repeat center center/cover;
   height: 70vh;
@@ -76,7 +83,6 @@ section {
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
-
 
 .hero-content {
   max-width: 600px;
@@ -93,7 +99,9 @@ section {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-/* Quick-Links-Section */
+/* ============================
+   Quick Links Section
+============================ */
 .quick-links {
   padding: 60px 20px;
   text-align: center;
@@ -110,7 +118,6 @@ section {
   margin-bottom: 30px;
 }
 
-/* Karten-Layout */
 .link-cards {
   display: flex;
   gap: 30px;
@@ -148,7 +155,6 @@ section {
   margin-bottom: 20px;
 }
 
-/* Buttons */
 .link-card .btn {
   display: inline-block;
   padding: 10px 20px;
@@ -165,304 +171,87 @@ section {
   background: var(--secondary-blue);
 }
 
-
-/* Allgemeine Karten-Stile */
-.command-card {
+/* ============================
+   Jobs Section (Karriere)
+============================ */
+.jobs {
   background: var(--light-gray);
-  border-radius: 20px;
-  padding: 20px;
-  text-align: center;
-  width: 300px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Verteilt Inhalte gleichmäßig */
-  align-items: center; /* Zentriert Inhalte horizontal */
+  border-radius: 10px;
+  margin-top: 40px;
 }
 
-.command-card:hover {
-  transform: translateY(-10px); /* Leichtes Anheben */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.command-card .image-container {
-  display: flex;
-  justify-content: center; /* Horizontale Zentrierung */
-  align-items: center; /* Vertikale Zentrierung */
-  width: 250px;
-  height: 250px;
-  margin: 0 auto 15px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 50%;
-  border: 5px solid var(--primary-red); /* Roter Rahmen */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.command-card img {
-  display: block;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover; /* Passt das Bild perfekt in den Container */
-  transition: transform 0.3s;
-}
-
-.command-card:hover img {
-  transform: scale(1.1); /* Vergrößerung beim Hover */
-}
-
-.role-title {
-  font-size: 1.2rem;
+.jobs h2 {
+  font-size: 2rem;
   color: var(--secondary-blue);
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-align: center; /* Zentriert die Titel */
-}
-
-.command-card h3 {
-  font-size: 1.5rem;
-  color: var(--secondary-blue);
-  margin: 10px 0;
-  text-align: center; /* Zentriert den Namen */
-}
-
-.command-card p {
-  font-size: 1rem;
-  color: var(--accent-darkblue);
-  line-height: 1.4;
-  text-align: center; /* Zentriert die Beschreibung */
+  margin-bottom: 30px;
 }
 
 .job-cards {
   display: flex;
+  gap: 20px;
   justify-content: center;
-  gap: 40px;
   flex-wrap: wrap;
 }
 
 .job-card {
-  background: var(--light-gray);
+  background: var(--background-white);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  border-radius: 10px;
-  width: 300px;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex: 1 1 300px;
+  max-width: 320px;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 .job-card h3 {
   font-size: 1.5rem;
   color: var(--secondary-blue);
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .job-card p {
   font-size: 1rem;
   color: var(--accent-darkblue);
-  line-height: 1.5;
+  line-height: 1.6;
   margin-bottom: 20px;
 }
 
-.job-card .btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
-  color: var(--background-white);
-  background: var(--primary-red);
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.job-card .btn:hover {
-  background: var(--secondary-blue);
-}
-
-/* Allgemeines Layout für die About-Section */
-.about {
-  padding: 60px 20px;
-  text-align: center;
-  background: var(--light-gray);
-  border-radius: 12px;
-  margin: 40px auto;
-  max-width: 1100px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-}
-
-.about h2 {
-  font-size: 2.8rem;
-  color: var(--primary-red);
-  margin-bottom: 30px;
-}
-
-.about-intro {
-  font-size: 1.2rem;
-  color: var(--accent-darkblue);
-  margin-bottom: 30px;
-  line-height: 1.8;
-}
-
-/* Departments Layout */
-.departments {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.department-card {
-  background: var(--background-white);
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  padding: 30px 20px;
-  text-align: center;
-  width: 300px;
-  max-width: 100%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.department-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
-
-.department-icon {
-  font-size: 3rem;
-  color: var(--primary-red);
-  margin-bottom: 15px;
-}
-
-.department-card h3 {
-  font-size: 1.6rem;
-  color: var(--secondary-blue);
-  margin-bottom: 15px;
-}
-
-.department-card p {
-  font-size: 1rem;
-  color: var(--accent-darkblue);
-  line-height: 1.6;
-}
-
-/* Mission Statement */
-.about-mission {
-  font-size: 1.3rem;
-  color: var(--primary-red);
-  font-weight: bold;
-  margin-top: 40px;
-  line-height: 1.8;
-}
-
-
-/* High Command Section */
-.high-command {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.high-command h2 {
-  margin-bottom: 40px;
-  font-size: 2.5rem;
-  color: var(--primary-red);
-}
-
-.command-pyramid {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-}
-
-.command-top {
-  display: flex;
-  justify-content: center;
-}
-
-.command-level {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-}
-
-/* Hausordnung Section */
-.rules ul, .consequences ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 800px;
-  text-align: left;
-}
-
-.rules li, .consequences li {
-  font-size: 1rem;
-  color: var(--accent-darkblue);
-  margin-bottom: 10px;
-  position: relative;
-  padding-left: 20px;
-}
-
-.rules li::before, .consequences li::before {
-  content: '✔';
-  color: var(--primary-red);
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 1.2rem;
-}
-
-/*Kontakt Section */
-.contact-info ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 600px;
-  text-align: left;
-}
-
-.contact-info li {
-  font-size: 1.2rem;
-  color: var(--accent-darkblue);
-  margin-bottom: 15px;
-}
-
-.contact-info a {
-  color: var(--secondary-blue);
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.contact-info a:hover {
-  text-decoration: underline;
-}
-
-/* Status-Anzeige */
 .status {
   font-size: 1rem;
   font-weight: bold;
   text-align: center;
-  padding: 10px 15px; /* Mehr Platz innerhalb des Felds */
-  margin-top: 15px;
+  padding: 10px 15px;
   border-radius: 5px;
-  display: inline-block; /* Größe passt sich dem Inhalt an */
+  display: inline-block;
+  width: 120px;
+  margin: 0 auto;
 }
 
-/* Offen-Status */
 .status-open {
   background-color: var(--primary-red);
   color: var(--background-white);
   box-shadow: 0 4px 10px rgba(255, 0, 0, 0.2);
 }
 
-/* Geschlossen-Status */
 .status-closed {
   background-color: gray;
   color: var(--background-white);
   box-shadow: 0 4px 10px rgba(128, 128, 128, 0.2);
 }
 
-/* Footer */
+/* ============================
+   Footer
+============================ */
 footer {
   text-align: center;
   padding: 20px;

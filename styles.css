@@ -73,30 +73,100 @@ section {
    Hero Section
 ============================ */
 .hero {
-  background: url('EMT.jpg') no-repeat center center/cover;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url('EMT.jpg') no-repeat center center/cover;
   height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: var(--background-white);
-  position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
 
-.hero-content {
-  max-width: 600px;
-}
-
 .hero h1 {
-  font-size: 3rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  font-size: 3.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   margin-bottom: 20px;
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* ============================
+   About Section
+============================ */
+.about {
+  padding: 60px 20px;
+  text-align: center;
+  background: var(--light-gray);
+  margin: 40px auto;
+  border-radius: 12px;
+  max-width: 1100px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+  font-size: 2.4rem;
+  color: var(--secondary-blue);
+  margin-bottom: 20px;
+}
+
+.about-intro {
+  font-size: 1.2rem;
+  color: var(--accent-darkblue);
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+.departments {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap; /* Responsive Layout */
+  margin: 20px 0;
+}
+
+.department-card {
+  flex: 1;
+  max-width: 500px;
+  background: var(--background-white);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.department-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.department-card h3 {
+  font-size: 1.6rem;
+  color: var(--secondary-blue);
+  margin-bottom: 15px;
+}
+
+.department-card p {
+  font-size: 1rem;
+  color: var(--accent-darkblue);
+  line-height: 1.6;
+}
+
+/* Mission Statement */
+.about-mission {
+  font-size: 1.2rem;
+  color: var(--primary-red);
+  font-weight: bold;
+  margin-top: 30px;
+  line-height: 1.8;
 }
 
 /* ============================
@@ -105,7 +175,7 @@ section {
 .quick-links {
   padding: 60px 20px;
   text-align: center;
-  background: var(--background-white);
+  background: var(--light-gray);
   margin: 40px auto;
   max-width: 1100px;
   border-radius: 12px;
@@ -118,6 +188,7 @@ section {
   margin-bottom: 30px;
 }
 
+/* Karten-Container */
 .link-cards {
   display: flex;
   gap: 30px;
@@ -125,8 +196,9 @@ section {
   flex-wrap: wrap;
 }
 
+/* Karten-Stil */
 .link-card {
-  background: var(--light-gray);
+  background: var(--background-white);
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -140,12 +212,19 @@ section {
 .link-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  background: var(--secondary-blue);
+  color: var(--background-white);
 }
 
 .link-card h3 {
   font-size: 1.6rem;
   color: var(--secondary-blue);
   margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.link-card:hover h3 {
+  color: var(--background-white);
 }
 
 .link-card p {
@@ -153,8 +232,14 @@ section {
   color: var(--accent-darkblue);
   line-height: 1.6;
   margin-bottom: 20px;
+  transition: color 0.3s ease;
 }
 
+.link-card:hover p {
+  color: var(--background-white);
+}
+
+/* Buttons */
 .link-card .btn {
   display: inline-block;
   padding: 10px 20px;
@@ -168,7 +253,9 @@ section {
 }
 
 .link-card .btn:hover {
-  background: var(--secondary-blue);
+  background: var(--background-white);
+  color: var(--primary-red);
+  border: 2px solid var(--primary-red);
 }
 
 /* ============================
@@ -191,6 +278,7 @@ section {
   gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 40px;
 }
 
 .job-card {
@@ -201,7 +289,7 @@ section {
   text-align: center;
   flex: 1 1 300px;
   max-width: 320px;
-  min-height: 280px;
+  min-height: 280px; /* Gleiche Höhe */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -233,8 +321,9 @@ section {
   padding: 10px 15px;
   border-radius: 5px;
   display: inline-block;
-  width: 120px;
+  width: 120px; /* Einheitliche Breite */
   margin: 0 auto;
+  transition: transform 0.3s ease;
 }
 
 .status-open {
@@ -247,6 +336,45 @@ section {
   background-color: gray;
   color: var(--background-white);
   box-shadow: 0 4px 10px rgba(128, 128, 128, 0.2);
+}
+
+/* Bewerbung einreichen */
+.application {
+  padding: 50px 20px;
+  text-align: center;
+  background: var(--light-gray);
+  margin-top: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.application h2 {
+  font-size: 2rem;
+  color: var(--primary-red);
+  margin-bottom: 15px;
+}
+
+.application p {
+  font-size: 1.2rem;
+  color: var(--accent-darkblue);
+  margin-bottom: 20px;
+}
+
+.email-link {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--secondary-blue);
+  text-decoration: none;
+  background: var(--background-white);
+  padding: 10px 20px;
+  border: 2px solid var(--secondary-blue);
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.email-link:hover {
+  background-color: var(--secondary-blue);
+  color: var(--background-white);
 }
 
 /* ============================

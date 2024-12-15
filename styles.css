@@ -407,52 +407,75 @@ section {
   margin: 0 auto;
 }
 
-/* Pyramidenlayout */
-.command-pyramid {
+/* Treppen-Layout */
+.command-podium {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Vertikale Ausrichtung am unteren Rand */
+  gap: 20px; /* Abstand zwischen den Karten */
+}
+
+/* Platz 1 - Mitte */
+.command-podium .command-center {
+  width: 300px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
+  justify-content: space-between;
+  background: var(--background-white);
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-40px); /* Höher positioniert */
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.command-middle {
+.command-podium .command-center:hover {
+  transform: translateY(-50px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Plätze 2 und 3 */
+.command-podium .command-side {
+  width: 260px;
+  height: 450px;
   display: flex;
-  gap: 30px;
-  justify-content: center;
-  width: 100%;
-}
-
-/* Einheitlicher Kartenstil */
-.command-card {
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   background: var(--background-white);
   border-radius: 15px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  text-align: center;
-  width: 240px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.command-card:hover {
+.command-podium .command-side:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Bilder */
+/* Bildcontainer - Einheitliche Größe */
 .image-container {
-  width: 150px;
-  height: 150px;
-  margin: 0 auto 15px;
+  width: 150px; /* Einheitliche Breite */
+  height: 150px; /* Einheitliche Höhe */
+  margin: 15px auto; /* Automatische Zentrierung */
   overflow: hidden;
   border-radius: 50%;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  border: 3px solid var(--primary-red);
+  border: 3px solid var(--primary-red); /* Einheitlicher Rand */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Bilder - Einheitlich und skalierbar */
 .image-container img {
-  width: 100%;
+  width: 100%; /* Skaliert auf die Größe des Containers */
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Keine Verzerrung des Bildes */
+  border-radius: 50%; /* Runde Form für das Bild */
 }
 
 /* Titel und Inhalte */
@@ -465,15 +488,16 @@ section {
 .command-card h4 {
   font-size: 1.4rem;
   color: var(--primary-red);
-  margin-bottom: 10px;
+  margin: 20px 0;
+  font-weight: bold;
 }
 
 .command-card p {
   font-size: 1rem;
   color: var(--accent-darkblue);
   line-height: 1.6;
+  text-align: center;
 }
-
 
 
 /* ============================

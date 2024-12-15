@@ -65,7 +65,7 @@ section {
 
 /* Hero Section */
 .hero {
-  background: url('hero.jpg') no-repeat center center/cover;
+  background: url('EMT.jpg') no-repeat center center/cover;
   height: 70vh;
   display: flex;
   justify-content: center;
@@ -312,6 +312,30 @@ section {
   text-decoration: underline;
 }
 
+/* Status-Anzeige */
+.status {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 15px; /* Mehr Platz innerhalb des Felds */
+  margin-top: 15px;
+  border-radius: 5px;
+  display: inline-block; /* Größe passt sich dem Inhalt an */
+}
+
+/* Offen-Status */
+.status-open {
+  background-color: var(--primary-red);
+  color: var(--background-white);
+  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.2);
+}
+
+/* Geschlossen-Status */
+.status-closed {
+  background-color: gray;
+  color: var(--background-white);
+  box-shadow: 0 4px 10px rgba(128, 128, 128, 0.2);
+}
 
 /* Footer */
 footer {

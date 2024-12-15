@@ -458,26 +458,33 @@ section {
 
 /* Einheitlicher Bildcontainer */
 .image-container {
-  width: 150px; /* Einheitliche Breite */
-  height: 150px; /* Einheitliche Höhe */
-  margin: 15px auto; /* Automatische Zentrierung */
-  overflow: hidden;
-  border-radius: 50%; /* Runde Form */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  border: 3px solid var(--primary-red); /* Roter Rand */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 150px !important; /* Einheitliche Breite */
+  height: 150px !important; /* Einheitliche Höhe */
+  margin: 15px auto !important; /* Automatische Zentrierung */
+  overflow: hidden !important;
+  border-radius: 50% !important; /* Runde Form */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+  border: 3px solid var(--primary-red) !important; /* Einheitlicher Rand */
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
 
 /* Einheitliches Bildverhalten */
 .image-container img {
-  width: 100%; /* Füllt den Container aus */
-  height: 100%;
-  object-fit: cover; /* Sorgt für gleichmäßige Darstellung */
-  border-radius: 50%; /* Runde Form auch für das Bild */
+  width: 100% !important; /* Skaliert auf die Größe des Containers */
+  height: 100% !important;
+  object-fit: cover !important; /* Keine Verzerrung des Bildes */
+  border-radius: 50% !important; /* Runde Form auch für das Bild */
 }
 
+.command-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
 /* Titel und Inhalte */
 .command-card h3 {

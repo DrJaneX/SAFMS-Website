@@ -385,130 +385,106 @@ section {
 /* ============================
    High Command Section (Führung)
 ============================ */
-/* High Command Section */
 .high-command {
-  padding: 80px 20px;
+  padding: 40px 20px;
   text-align: center;
-  background: var(--light-gray);
-  margin: 40px auto;
+  background: #f9f9f9;
+  margin: 20px auto;
   border-radius: 12px;
   max-width: 1200px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .high-command h2 {
-  font-size: 2.8rem;
-  color: var(--secondary-blue);
-  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 40px;
 }
 
-.command-intro {
-  font-size: 1.4rem;
-  color: var(--accent-darkblue);
-  margin-bottom: 50px;
-  line-height: 1.8;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* Treppen-Layout */
 .command-podium {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end; /* Vertikale Ausrichtung am unteren Rand */
-  gap: 20px; /* Abstand zwischen den Karten */
+  display: grid;
+  grid-template-rows: repeat(2, auto); /* Zwei Reihen */
+  grid-template-columns: 1fr 1fr; /* Zwei Spalten in der zweiten Reihe */
+  gap: 30px; /* Abstand zwischen den Karten */
+  justify-items: center;
 }
 
-/* Platz 1 - Mitte */
-.command-podium .command-center {
+/* Top position - Assistant Chief */
+.command-top {
+  grid-row: 1;
+  grid-column: 1 / span 2; /* Nimmt die gesamte obere Reihe ein */
   width: 300px;
-  height: 500px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  background: var(--background-white);
-  border-radius: 15px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  transform: translateY(-40px); /* Höher positioniert */
-  padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: translateY(-30px); /* Leicht angehoben für die Spitze */
+  z-index: 2;
 }
 
-.command-podium .command-center:hover {
-  transform: translateY(-50px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-/* Plätze 2 und 3 */
-.command-podium .command-side {
+/* Left and Right positions */
+.command-left {
+  grid-row: 2;
+  grid-column: 1; /* Links */
   width: 260px;
-  height: 450px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  background: var(--background-white);
-  border-radius: 15px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.command-podium .command-side:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+.command-right {
+  grid-row: 2;
+  grid-column: 2; /* Rechts */
+  width: 260px;
 }
 
-/* Einheitlicher Bildcontainer */
-.image-container {
-  width: 150px !important; /* Einheitliche Breite */
-  height: 150px !important; /* Einheitliche Höhe */
-  margin: 15px auto !important; /* Automatische Zentrierung */
-  overflow: hidden !important;
-  border-radius: 50% !important; /* Runde Form */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
-  border: 3px solid var(--primary-red) !important; /* Einheitlicher Rand */
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-}
-
-/* Einheitliches Bildverhalten */
-.image-container img {
-  width: 100% !important; /* Skaliert auf die Größe des Containers */
-  height: 100% !important;
-  object-fit: cover !important; /* Keine Verzerrung des Bildes */
-  border-radius: 50% !important; /* Runde Form auch für das Bild */
-}
-
+/* General Card Styling */
 .command-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  padding: 20px;
   text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Titel und Inhalte */
+.command-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Titles */
 .command-card h3 {
-  font-size: 1.6rem;
-  color: var(--secondary-blue);
+  font-size: 1.2rem;
+  color: #0056B3;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #FF0000;
+  padding-bottom: 5px;
+}
+
+/* Card Names */
+.command-card h4 {
+  font-size: 1rem;
+  color: #FF0000;
+  font-weight: bold;
+  margin-top: 15px;
   margin-bottom: 10px;
 }
 
-.command-card h4 {
-  font-size: 1.4rem;
-  color: var(--primary-red);
-  margin: 20px 0;
-  font-weight: bold;
+/* Card Descriptions */
+.command-card p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
 }
 
-.command-card p {
-  font-size: 1rem;
-  color: var(--accent-darkblue);
-  line-height: 1.6;
+/* Image Container */
+.image-container {
+  width: 100%;
   text-align: center;
+  margin-bottom: 15px;
+}
+
+.image-container img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #FF0000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* ============================

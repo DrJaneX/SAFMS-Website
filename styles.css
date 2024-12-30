@@ -336,6 +336,10 @@ section {
   background-color: gray;
   color: var(--background-white);
   box-shadow: 0 4px 10px rgba(128, 128, 128, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px; /* Höhe anpassen, falls erforderlich */
 }
 
 /* Bewerbung einreichen */

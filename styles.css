@@ -507,6 +507,56 @@ section {
   text-align: center;
 }
 
+/* ============================
+   Hausordnung (House Rules)
+============================ */
+.house-rules {
+  background: var(--light-gray);
+  border-radius: 10px;
+  margin: 40px auto;
+  padding: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  text-align: left;
+  line-height: 1.8;
+}
+
+.house-rules h1, .house-rules h2, .house-rules h3 {
+  color: var(--secondary-blue);
+  margin-bottom: 20px;
+}
+
+.house-rules h1 {
+  font-size: 2.6rem;
+  text-align: center;
+}
+
+.house-rules h2 {
+  font-size: 2rem;
+  margin-top: 40px;
+}
+
+.house-rules h3 {
+  font-size: 1.6rem;
+  margin-top: 30px;
+}
+
+.house-rules p {
+  font-size: 1.2rem;
+  color: var(--accent-darkblue);
+  margin-bottom: 20px;
+}
+
+.house-rules ul {
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+.house-rules ul li {
+  font-size: 1.2rem;
+  color: var(--accent-darkblue);
+  margin-bottom: 10px;
+}
 
 /* ============================
    Footer

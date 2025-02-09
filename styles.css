@@ -549,6 +549,10 @@ strong {
   margin-left: 0;
 }
 
+.house-rules ul ul {
+  padding-left: 20px;
+}
+
 .house-rules ol {
   counter-reset: none;
   list-style-type: decimal;

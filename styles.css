@@ -3,9 +3,9 @@
 ============================== */
 :root {
   --primary-red: #FF0000; /* Hauptfarbe Rot */
-  --secondary-blue: #0056B3; /* Sekundärfarbe Blau */
+  --secondary-blue: #021e3d; /* Sekundärfarbe Blau */
   --background-white: #FFFFFF; /* Hintergrundfarbe Weiß */
-  --accent-darkblue: #002855; /* Akzentfarbe Dunkelblau */
+  --accent-darkblue: #1E2B44; /* Akzentfarbe Dunkelblau */
   --light-gray: #F4F4F4; /* Helles Grau für Sektionen */
 }
 

@@ -30,6 +30,13 @@ section {
   text-align: center;
 }
 
+strong {
+  color: var(--primary-red);
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
 /* ============================
    Navigation (Navbar)
 ============================ */

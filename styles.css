@@ -9,6 +9,7 @@
   --light-gray: #F4F4F4; /* Helles Grau für Sektionen */
 }
 
+
 /* ============================
    Reset und Allgemeine Styles
 ============================ */
@@ -489,6 +490,62 @@ strong {
   color: #FF0000;
   font-weight: bold;
   margin-bottom: 10px;
+}
+
+/* ============================
+   Privatpatient Section
+============================ */
+.privatpatient {
+  background-color: var(--light-gray);
+  border-radius: 12px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.privatpatient h2 {
+  font-size: 2.4rem;
+  color: var(--secondary-blue);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.privatpatient ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.privatpatient ul li {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.privatpatient h3 {
+  font-size: 1.8rem;
+  color: var(--primary-red);
+  margin-top: 30px;
+}
+
+.privatpatient p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--accent-darkblue);
+  margin-bottom: 20px;
+}
+
+.privatpatient a {
+  color: var(--primary-red);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.privatpatient a:hover {
+  color: var(--highlight-yellow);
 }
 
 /* ============================
